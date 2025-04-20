@@ -29,12 +29,9 @@ uV (installed via pip: pip install uv)
 PostgreSQL running locally or remotely
 
 Setup Instructions
-bash
-Copy
-Edit
+
 # Clone the repository
-git clone https://github.com/your-username/MCP_Server_Postgres.git
-cd MCP_Server_Postgres
+git clone https://github.com/shrishailwali/mcp-server-postgres
 
 # Install dependencies using uV
 uv pip install -r requirements.txt  # or use pyproject.toml directly
@@ -42,30 +39,18 @@ Environment Configuration
 Create a .env file with the following keys:
 
 env
-Copy
-Edit
+
 POSTGRES_HOST=localhost
 POSTGRES_PORT=5432
 POSTGRES_USER=postgres
 POSTGRES_DB=cmms
 POSTGRES_PASSWORD=yourpassword
+
+
 Run the Server
-bash
-Copy
-Edit
 uvicorn main:app --reload
-Project Structure
-bash
-Copy
-Edit
-MCP_Server_Postgres/
-├── main.py               # FastAPI app entry point
-├── db.py                 # Database connection logic
-├── schemas/              # JSON schema definitions for assets, parts, etc.
-├── utils/                # Helper functions for transformation and validation
-├── .env                  # Environment configuration
-├── pyproject.toml        # Project dependencies and metadata
-└── uv.lock               # uV environment lock file
+
+
 Integration with AutoGen AI
 AutoGen is used to:
 
